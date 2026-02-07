@@ -3,7 +3,7 @@
 -- Sistema de Gestión de Membresías
 -- =============================================
 
-USE membresias_db;
+USE b924foi4cowsxiemc5dm;
 
 -- Limpiar datos existentes (CUIDADO: Esto borrará todos los datos)
 -- Descomenta estas líneas solo si quieres empezar desde cero
