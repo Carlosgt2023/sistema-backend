@@ -8,10 +8,14 @@ require('dotenv').config();
 // Crear pool de conexiones para mejor rendimiento
 // El pool maneja múltiples conexiones de manera eficiente
 const pool = mysql.createPool({
-    host: process.env.DB_HOST || 'b924foi4cowsxiemc5dm-mysql.services.clever-cloud.com',
+//  host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'b924foi4cowsxiemc5dm-mysql.services.clever-cloud.com',    
+//  user: process.env.DB_USER || 'root',
     user: process.env.DB_USER || 'ue6vicmoxg38ecd2',
+//  password: process.env.DB_PASSWORD || 'Cali123$',
     password: process.env.DB_PASSWORD || 'i1pWtUjDxrxMXUYEYA8s',
-    database: process.env.DB_NAME || 'b924foi4cowsxiemc5dm',
+//  database: process.env.DB_NAME || 'membresias_db',
+    database: process.env.DB_NAME || 'b924foi4cowsxiemc5dm',    
     port: process.env.DB_PORT || 3306,
     waitForConnections: true,
     connectionLimit: 10, // Máximo 10 conexiones simultáneas
