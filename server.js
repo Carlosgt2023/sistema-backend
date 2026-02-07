@@ -29,11 +29,17 @@ const PORT = process.env.PORT || 3000;
 // =============================================
 
 // CORS - Permitir peticiones desde el frontend
-app.use(cors({
-    origin: '*', // En producción, especifica el dominio exacto
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// REEMPLÁZALO POR ESTO:
+   const corsOptions = {
+       origin: '*', // Permitir TODOS los orígenes
+       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+       allowedHeaders: ['Content-Type', 'Authorization'],
+       credentials: false,
+       optionsSuccessStatus: 200
+   };
+
+   app.use(cors(corsOptions));
+   app.options('*', cors(corsOptions)); // Manejar preflight
 
 // Parser de JSON
 app.use(bodyParser.json());
